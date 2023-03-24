@@ -1,0 +1,4 @@
+SECRET_HERE = '249y823r9v8238r9u'
+SALT = b'jhgfdsa'
+ITERATION = 1000
+ALG0 = 'HS256'

@@ -1,8 +1,8 @@
-from project.dao.genre import GenreDao
+from project.dao.director import DirectorDao
 
 
-class GenreService:
-    def __init__(self, dao: GenreDao):
+class DirectorService:
+    def __init__(self, dao: DirectorDao):
         self.dao = dao
 
     def get_one(self, aid):
@@ -16,11 +16,10 @@ class GenreService:
 
     def update(self, data):
         aid = data.get("id")
-        user = self.get_one(aid)
+        director = self.get_one(aid)
 
         if "name" in data:
-            user.email = data.get("name")
-        self.dao.update(user)
+            director.email = data.get("name")
 
     def delete(self, aid):
-       return self.dao.delete(aid)
+        return self.dao.delete(aid)
